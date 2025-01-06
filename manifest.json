@@ -8,12 +8,12 @@
     "icons": [
         {
             "src": "Images/botany.jpg",
-            "type": "image/png",
+            "type": "image/jpg",
             "sizes": "192*192" 
         },
         {
 "src": "Images/botany.jpg",
-"type": "image/png",
+"type": "image/jpg",
 "sizes": "512*512"
         }
     ]
