@@ -1,0 +1,83 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    word-spacing: 5px;
+    line-height: 0.6cm;
+}
+
+.span {
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    text-indent: 50px;
+
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.nav li {
+    display: inline;
+    margin: 0 10px;
+
+}
+
+.nav a {
+    color: red;
+    font-weight: bold;
+
+}
+
+nav a:hover {
+    color: #555;
+}
+
+.a {
+    text-decoration: none;
+}
+
+.bold {
+    background-color: bisque;
+}
+
+.links {
+    background-color: gainsboro;
+}
+
+.reference {
+    font-style: italic;
+}
+
+.collapsible {
+    cursor: pointer;
+    padding: 5px;
+    text-align: left;
+    transition: 1.0s;
+    transform: scale(0.99);
+
+}
+
+.collapsible:hover {
+    transform: scale(1.0);
+}
+
+.collap {
+    cursor: pointer;
+    padding: 5px;
+
+}
+
+.collap:hover {
+    color: darkblue;
+}
+
+.content {
+    display: none;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+h6 {
+    text-align: right;
+}

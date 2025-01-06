@@ -1,0 +1,64 @@
+body {
+    font-size: 15px;
+}
+
+h2 {
+    text-align: center;
+    padding: 10px;
+    border: 2px solid beige;
+    background-color: bisque;
+    box-shadow: 5px 5px 10px burlywood;
+
+}
+
+p {
+    background-color: rgb(247, 230, 230);
+    font-weight: lighter;
+    font-size: 20px;
+    line-height: 1.5;
+
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #555;
+}
+
+.note-section {
+    border-radius: 10px;
+}
+
+.collapsible {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #6fd2eb;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.collapsible:hover {
+    background-color: rgb(42, 201, 245);
+}
+
+.content {
+    display: none;
+    margin: 1px;
+    padding: 0px;
+}
