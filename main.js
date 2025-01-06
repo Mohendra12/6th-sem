@@ -17,7 +17,7 @@ function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const coll = doucment.querySelectorAll('.collap');
+    const coll = doucment.querySelectorAll('.collapse');
     coll.forEach(function(item){
         item.addEventListener('click', function()
     {
