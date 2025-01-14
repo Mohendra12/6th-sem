@@ -34,3 +34,23 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     });
 });
+/*mobile menu*/
+document.getElementById('mobile-menu-toggle').addEventListener('click', function () {
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  document.getElementById('syllabus-submenu-toggle').addEventListener('click', function () {
+    const submenu = document.getElementById('syllabus-submenu');
+    submenu.classList.toggle('hidden');
+  });
+
+  document.getElementById('notes-submenu-toggle').addEventListener('click', function () {
+    const submenu = document.getElementById('notes-submenu');
+    submenu.classList.toggle('hidden');
+  });
+
+  document.getElementById('pyqs-submenu-toggle').addEventListener('click', function () {
+    const submenu = document.getElementById('pyqs-submenu');
+    submenu.classList.toggle('hidden');
+  });

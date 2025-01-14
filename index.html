@@ -9,72 +9,22 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <!--Google fonts-->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <!--manifest-->
   <link rel="manifest" href="manifest.json">
+
+  <!--Tailwind Css-->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!--custom style-->
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
   
-  <style>
-    body {
-      font-family: "Roboto", sans-serif;
-      background: linear-gradient(to right, #6a11cb, #2575fc);
-      color: white;
-      overflow-x: hidden;
-      text-align: center;
-    }
-video {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
-.navbar {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.container {
-  margin-top: 100px;
-}
-
-h1 {
-  font-size: 2rem;
-  animation: fadeIn 2s ease-in-out;
-}
-
-.card {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-.card-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.card-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  } to {
-    opacity: 1;
-  }
-}
-
-   
-  </style>
+  
 </head>
 
 <body>
@@ -83,35 +33,128 @@ h1 {
   <!-- Background video 
 <video autoplay loop muted playsinline>
     <source src="Images/botanica.mp4" type="video/mp4">
-    Your browser does not support the video tag.</video>--
+    Your browser does not support the video tag.</video>-->
+
   <!-- Dynamic Heading -->
   <h1 id="dynamicHeading"></h1>
 
  
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">6th Semester Project</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link btn btn-outline-dark" href="Notes/HCC601/unit1.html">Notes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link btn btn-outline-dark" href="PYQ/pyq H601/12021.html">PYQs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link btn btn-outline-dark" href="Syllabus/H601.html">Syllabus</a>
-          </li>
-        </ul>
+  <nav class="bg-gray-500" style="text-align: left;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Logo -->
+        <div class="flex items-center">
+          <span class="text-white text-xl font-bold">6th sem</span>
+        </div>
+
+        <!-- Menu for Desktop -->
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+
+            <!-- Home Menu -->
+            <a href="index.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+           
+
+            <!-- Syllabus Menu with Submenu -->
+            <div class="relative group">
+              <button class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                Syllabus
+              </button>
+              <div class="absolute hidden group-hover:block bg-gray-700 w-40">
+                <a href="Syllabus/H601.html" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">HCC601</a>
+                <a href="Syllabus/H602.html" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">HCC602</a>
+                <a href="Syllabus/DSE601.html" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">DSE601</a>
+                <a href="Syllabus/DSE603.html" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">DSE603</a>
+                
+              </div>
+            </div>
+           <!-- Notes Menu with Submenu -->
+            <div class="relative group">
+              <button class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                Notes
+              </button>
+              <div class="absolute hidden group-hover:block bg-gray-700 w-40">
+                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">HCC601</a>
+                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">HCC602</a>
+                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">DSE601</a>
+                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">DSE603</a>
+               
+              </div>
+            </div>
+            <!-- PYQs Menu with Submenu -->
+            <div class="relative group">
+              <button class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                PYQs
+              </button>
+              <div class="absolute hidden group-hover:block bg-gray-700 w-40">
+                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">HCC601</a>
+                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">HCC602</a>
+                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">DSE601</a>
+                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">DSE603</a>
+                
+              </div>
+            </div>
+
+          
+          </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-toggle" class="text-gray-300 hover:text-white focus:outline-none">
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
+
+    <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-gray-700">
+  <a href="#" class="block text-gray-200 px-3 py-2 hover:bg-gray-600">Home</a>
+  
+  <!-- Syllabus Menu -->
+  <div>
+    <button id="syllabus-submenu-toggle" class="block text-gray-200 px-3 py-2 text-left w-full">
+      Syllabus
+    </button>
+    <div id="syllabus-submenu" class="hidden ml-4 space-y-1">
+      <a href="Syllabus/H601.html" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">HCC601</a>
+      <a href="Syllabus/H602.html" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">HCC602</a>
+      <a href="Syllabus/DSE601.html" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">DSE601</a>
+      <a href="Syllabus/DSE603.html" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">DSE603</a>
+    </div>
+  </div>
+
+  <!-- Notes Menu -->
+  <div>
+    <button id="notes-submenu-toggle" class="block text-gray-200 px-3 py-2 text-left w-full">
+      Notes
+    </button>
+    <div id="notes-submenu" class="hidden ml-4 space-y-1">
+      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">HCC601</a>
+      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">HCC602</a>
+      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">DSE601</a>
+      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">DSE603</a>
+    </div>
+  </div>
+
+  <!-- PYQs Menu -->
+  <div>
+    <button id="pyqs-submenu-toggle" class="block text-gray-200 px-3 py-2 text-left w-full">
+      PYQs
+    </button>
+    <div id="pyqs-submenu" class="hidden ml-4 space-y-1">
+      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">HCC601</a>
+      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">HCC602</a>
+      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">DSE601</a>
+      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">DSE603</a>
+    </div>
+  </div>
+</div>  
   </nav>
 
   <div class="container mt-5">
@@ -163,10 +206,9 @@ h1 {
 </footer>
 
 
-
+<!--webchat-->
 <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
 <script src="https://files.bpcontent.cloud/2025/01/08/06/20250108064335-6034BQ70.js"></script>
-    
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -186,20 +228,27 @@ h1 {
       }
     }
     typeEffect();
-
-    // Dark/Light Mode Toggle
-    const toggle = document.getElementById("themeToggle");
-    toggle.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-      toggle.textContent = document.body.classList.contains("dark-mode") ? "Switch to Light Mode" : "Switch to Dark Mode";
+</script>
+  <script>
+    document.getElementById('mobile-menu-toggle').addEventListener('click', function () {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
     });
-
-    // Remove loader after page load
-    window.addEventListener("load", () => document.body.classList.add("loaded"));
-
-    // customize the webchat
-   
-
+  
+    document.getElementById('syllabus-submenu-toggle').addEventListener('click', function () {
+      const submenu = document.getElementById('syllabus-submenu');
+      submenu.classList.toggle('hidden');
+    });
+  
+    document.getElementById('notes-submenu-toggle').addEventListener('click', function () {
+      const submenu = document.getElementById('notes-submenu');
+      submenu.classList.toggle('hidden');
+    });
+  
+    document.getElementById('pyqs-submenu-toggle').addEventListener('click', function () {
+      const submenu = document.getElementById('pyqs-submenu');
+      submenu.classList.toggle('hidden');
+    });
   </script>
 </body>
 </html>

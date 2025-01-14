@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+
+  <!-- Tailwind CSS -->
+   
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Logo -->
+        <div class="flex items-center">
+          <span class="text-white text-xl font-bold">6th sem</span>
+        </div>
+
+        <!-- Menu for Desktop -->
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+ <!-- Home Menu -->
+            <a href="index.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+           
+
+            <!-- Syllabus Menu with Submenu -->
+            <div class="relative group">
+              <button class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                Syllabus
+              </button>
+              <div class="absolute hidden group-hover:block bg-gray-700 w-40">
+                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">HCC601</a>
+                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">HCC602</a>
+                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">DSE601</a>
+                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">DSE603</a>
+                
+              </div>
+            </div>
+ <!-- Notes Menu with Submenu -->
+            <div class="relative group">
+              <button class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                Notes
+              </button>
+              <div class="absolute hidden group-hover:block bg-gray-700 w-40">
+                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">HCC601</a>
+                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">HCC602</a>
+                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">DSE601</a>
+                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">DSE603</a>
+               
+              </div>
+            </div>
+ <!-- PYQs Menu with Submenu -->
+            <div class="relative group">
+              <button class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                PYQs
+              </button>
+              <div class="absolute hidden group-hover:block bg-gray-700 w-40">
+                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">HCC601</a>
+                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">HCC602</a>
+                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">DSE601</a>
+                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">DSE603</a>
+                
+              </div>
+            </div>
+
+          
+          </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-toggle" class="text-gray-300 hover:text-white focus:outline-none">
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden md:hidden bg-gray-700">
+  <a href="#" class="block text-gray-200 px-3 py-2 hover:bg-gray-600">Home</a>
+  
+  <!-- Syllabus Menu -->
+  <div>
+    <button id="syllabus-submenu-toggle" class="block text-gray-200 px-3 py-2 text-left w-full">
+      Syllabus
+    </button>
+    <div id="syllabus-submenu" class="hidden ml-4 space-y-1">
+      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">HCC601</a>
+      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">HCC602</a>
+      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">DSE601</a>
+      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">DSE603</a>
+    </div>
+  </div>
+
+  <!-- Notes Menu -->
+  <div>
+    <button id="notes-submenu-toggle" class="block text-gray-200 px-3 py-2 text-left w-full">
+      Notes
+    </button>
+    <div id="notes-submenu" class="hidden ml-4 space-y-1">
+      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">HCC601</a>
+      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">HCC602</a>
+      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">DSE601</a>
+      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">DSE603</a>
+    </div>
+  </div>
+
+  <!-- PYQs Menu -->
+  <div>
+    <button id="pyqs-submenu-toggle" class="block text-gray-200 px-3 py-2 text-left w-full">
+      PYQs
+    </button>
+    <div id="pyqs-submenu" class="hidden ml-4 space-y-1">
+      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">HCC601</a>
+      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">HCC602</a>
+      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">DSE601</a>
+      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">DSE603</a>
+    </div>
+  </div>
+</div>
+
+    <!-- Mobile Menu -->
+   
+
+    
+  </nav>
+<!-- JavaScript for Mobile Menu and Submenu Toggle -->
+<script>
+  document.getElementById('mobile-menu-toggle').addEventListener('click', function () {
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  document.getElementById('syllabus-submenu-toggle').addEventListener('click', function () {
+    const submenu = document.getElementById('syllabus-submenu');
+    submenu.classList.toggle('hidden');
+  });
+
+  document.getElementById('notes-submenu-toggle').addEventListener('click', function () {
+    const submenu = document.getElementById('notes-submenu');
+    submenu.classList.toggle('hidden');
+  });
+
+  document.getElementById('pyqs-submenu-toggle').addEventListener('click', function () {
+    const submenu = document.getElementById('pyqs-submenu');
+    submenu.classList.toggle('hidden');
+  });
+</script>
+  
+
+</body>
+</html>
