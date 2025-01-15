@@ -23,7 +23,64 @@
   <!--custom style-->
   <link rel="stylesheet" href="style.css">
   <script src="main.js"></script>
-  
+  <style>
+    body {
+    font-family: "Roboto", sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    overflow-x: hidden;
+    text-align: center;
+  }
+video {
+position: fixed;
+width: 100%;
+height: 100%;
+object-fit: cover;
+z-index: -1;
+}
+
+.navbar {
+background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+margin-top: 100px;
+}
+
+h1 {
+font-size: 4rem;
+animation: fadeIn 2s ease-in-out;
+}
+
+.card {
+background-color: rgba(255, 255, 255, 0.1);
+border: none;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+transition: transform 0.3s;
+}
+
+.card:hover {
+transform: scale(1.05);
+}
+
+.card-title {
+font-size: 1.5rem;
+font-weight: bold;
+}
+
+.card-title {
+font-size: 1.2rem;
+font-weight: bold;
+}
+
+@keyframes fadeIn {
+from {
+  opacity: 0;
+} to {
+  opacity: 1;
+}
+}
+  </style>
   
 </head>
 
@@ -40,9 +97,9 @@
 
  
   <!-- Navigation Bar -->
-  <nav class="bg-gray-500" style="text-align: left;">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
+  <nav class="bg-gray-600" style="text-align: left;">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-12">
         
         <!-- Logo -->
         <div class="flex items-center">
@@ -76,10 +133,10 @@
                 Notes
               </button>
               <div class="absolute hidden group-hover:block bg-gray-700 w-40">
-                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">HCC601</a>
-                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">HCC602</a>
-                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">DSE601</a>
-                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">DSE603</a>
+                <a href="Notes/HCC601/unit1.html" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">HCC601</a>
+                <a href="Notes/HCC602/Unit1.html" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">HCC602</a>
+                <a href="Notes/DSE601/Unit1.html" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">DSE601</a>
+                <a href="Notes/DSE603/Unit1.html" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">DSE603</a>
                
               </div>
             </div>
@@ -89,10 +146,10 @@
                 PYQs
               </button>
               <div class="absolute hidden group-hover:block bg-gray-700 w-40">
-                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">HCC601</a>
-                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">HCC602</a>
-                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">DSE601</a>
-                <a href="#" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">DSE603</a>
+                <a href="PYQ/pyq H601/12021.html" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">HCC601</a>
+                <a href="PYQ/pyq H602/22021.html" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">HCC602</a>
+                <a href="PYQ/pyq DSE601/42021.html" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">DSE601</a>
+                <a href="PYQ/pyq DSE603/32021.html" class="block px-4 py-2 text-gray-200 hover:bg-gray-600">DSE603</a>
                 
               </div>
             </div>
@@ -114,7 +171,7 @@
 
     <!-- Mobile Menu -->
   <div id="mobile-menu" class="hidden md:hidden bg-gray-700">
-  <a href="#" class="block text-gray-200 px-3 py-2 hover:bg-gray-600">Home</a>
+  <a href="index.html" class="block text-gray-200 px-3 py-2 hover:bg-gray-600">Home</a>
   
   <!-- Syllabus Menu -->
   <div>
@@ -135,10 +192,10 @@
       Notes
     </button>
     <div id="notes-submenu" class="hidden ml-4 space-y-1">
-      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">HCC601</a>
-      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">HCC602</a>
-      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">DSE601</a>
-      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">DSE603</a>
+      <a href="Notes/HCC601/unit1.html" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">HCC601</a>
+      <a href="Notes/HCC602/Unit1.html" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">HCC602</a>
+      <a href="Notes/DSE601/Unit1.html" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">DSE601</a>
+      <a href="Notes/DSE603/Unit1.html" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">DSE603</a>
     </div>
   </div>
 
@@ -148,10 +205,10 @@
       PYQs
     </button>
     <div id="pyqs-submenu" class="hidden ml-4 space-y-1">
-      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">HCC601</a>
-      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">HCC602</a>
-      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">DSE601</a>
-      <a href="#" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">DSE603</a>
+      <a href="PYQ/pyq H601/12021.html" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">HCC601</a>
+      <a href="PYQ/pyq H602/22021.html" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">HCC602</a>
+      <a href="PYQ/pyq DSE601/42021.html" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">DSE601</a>
+      <a href="PYQ/pyq DSE603/32021.html" class="block text-gray-200 px-3 py-2 rounded-md hover:bg-gray-600">DSE603</a>
     </div>
   </div>
 </div>  
